@@ -1,5 +1,7 @@
-html{
+*{
 	font-family: 'Raleway', sans-serif;
+}
+html{
 	text-rendering: optimizeLegibility;
 }
 
@@ -93,7 +95,67 @@ button{
 	width: 250px;
 }
 
-/* Responsivness */
-@media only screen and (max-width: 801px) {
+/* Login */
+.sidebar {
+	height: 100%;
+	background-color: #000;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+.main-text{
+	margin-top: 20%;
+	padding: 60px;
+	color: #fff;
+}
+.main-text h2{
+	font-weight: 300;
+}
+.main {
+	padding: 0px 10px;
+}
+.logo-login{
+	margin-left: 50px;
+	margin-top: 70px;
+}
 
+/* Responsivness */
+@media screen and (max-height: 450px) {
+	.sidebar {padding-top: 15px;}
+ }
+ 
+ @media screen and (max-width: 450px) {
+	.login-form{
+	    margin-top: 30%;
+	}
+ }
+ 
+ @media screen and (min-width: 768px){
+	.main{
+	    margin-left: 40%; 
+	}
+ 
+	.sidebar{
+	    width: 40%;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	}
+ 
+	.login-form{
+	    margin-top: 55%;
+	    margin-left: 30%; 
+
+	}
+ }
+.btn-black{
+	background-color: #000 !important;
+	color: #fff;
+	height: 50px;
+}
+
+/* owner dashboard */
+.card{
+	width: 25rem;
+	margin: 0 auto;
 }

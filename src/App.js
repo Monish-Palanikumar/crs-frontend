@@ -4,6 +4,8 @@ import Landing from "./components/Landing";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sample from "./components/Sample";
 import LoginComponent from "./components/LoginComponent";
+import OwnerDashboard from "./components/OwnerDashboard";
+import CustomerDashboard from "./components/CustomerDashboard";
 
 function App() {
 	return (
@@ -12,6 +14,8 @@ function App() {
 				<Route path="/" element={<Landing />} />
 				<Route path="/sample" element={<Sample />} />
 				<Route path="/login" element={<LoginComponent />} />
+				<Route path="/ownerdashboard" element={<OwnerDashboard />} />
+				<Route path="/customerdashboard" element={<CustomerDashboard />} />
 			</Routes>
 		</Router>
 	);
