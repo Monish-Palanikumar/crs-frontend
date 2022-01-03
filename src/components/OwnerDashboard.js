@@ -47,7 +47,7 @@ function OwnerDashboard() {
 				{
 					cars.map((car, index) => {
 						return (
-							<CarCard index={index} car={car} deleteCar={deleteCar} />
+							<CarCard key={index} index={index} car={car} deleteCar={deleteCar} />
 						)
 					})
 				}
