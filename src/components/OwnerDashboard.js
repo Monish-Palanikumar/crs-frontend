@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import AddCar from './AddCar';
+import CarCard from './CarCard';
 
 function OwnerDashboard() {
 	const [cars, setCars] = useState([]);
+	const navigate = useNavigate();
 	useEffect(() => {
 		axios.get(`http://localhost:5000/car/getAllCars`)
 			.then(res => {
@@ -10,40 +14,45 @@ function OwnerDashboard() {
 			})
 			.catch(error => console.log(error));
 	}, []);
+
+	const deleteCar = (e, cname) => {
+		e.preventDefault();
+		axios.get(`http://localhost:5000/car/delete?cname=${cname}`)
+			.then(res => console.log(res))
+			.catch(error => console.log(error));
+		window.location.reload();
+
+	}
+
+	const logout = (e) => {
+		e.preventDefault();
+		axios.get("http://localhost:5000/logout")
+			.then(res => {
+				navigate("/login");
+			})
+			.catch(error => console.log(error));
+	}
 	return (
 		<span>
-			<h1 className='text-center'>Owner Dashboard</h1>
+			<span>
+				<h2 className='mt-3 text-center'>Owner Dashboard</h2>
+				<button className='logout btn btn-black' onClick={logout}>Logout</button>
+			</span>
+
+			<hr />
+			<AddCar />
+			<hr />
+			<h3 className='mt-2 text-center'>Available Cars</h3>
 			<div className='row'>
 				{
-					cars.map(car => (
-						<div className="m-4">
-							<span key={car.cid} className='card text-center'>
-								<div className='card-body'>
-									<h5 className='card-title'>{car.cname}</h5>
-									<p className="card-text">Type: {car.ctype}</p>
-									<button className='btn btn-warning'>Update</button>
-									<br /><br />
-									<button className='btn btn-danger'>Delete</button>
-								</div>
-							</span>
-						</div>
-					))
+					cars.map((car, index) => {
+						return (
+							<CarCard index={index} car={car} deleteCar={deleteCar} />
+						)
+					})
 				}
 			</div>
 		</span>
-		// <div className='card'>
-		// 	<div className='card-body'>
-		// 		<h5 className='card-title'>{cars[0].cname}</h5>
-		// 		<p className="card-text">Type: {cars[0].ctype}</p>
-		// 		<button className='btn btn-primary'>Book</button>
-		// 	</div>
-		// </div>
-
-		// <ul>
-		// 	{
-		// 		cars.map(car => (<li key={car.cid}>{car.cname}</li>))
-		// 	}
-		// </ul>
 	)
 }
 

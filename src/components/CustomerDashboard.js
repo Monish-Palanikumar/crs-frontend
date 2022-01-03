@@ -12,7 +12,11 @@ function CustomerDashboard() {
 	}, []);
 	return (
 		<span>
-			<h1 className='text-center'>Customer Dashboard</h1>
+			<span>
+				<h2 className='mt-3 text-center'>Customer Dashboard</h2>
+				<button className='logout btn btn-black'>Logout</button>
+			</span>
+			<hr />
 			{
 				cars.map(car => (
 					<div key={car.cid} className='card'>
