@@ -142,6 +142,7 @@ button{
 .card{
 	width: 25rem;
 	margin: 0 auto;
+	
 }
 
 /* Add Car */
@@ -159,7 +160,7 @@ button{
 	width: 80%;
 }
 .logout{
-	margin-left: 20%;
+	margin-left: 15%;
 	width:10%
 }
 
@@ -172,7 +173,7 @@ button{
 	padding-left: 2.375rem;
 }
  
- .has-search .form-control-feedback {
+.has-search .form-control-feedback {
 	position: absolute;
 	z-index: 2;
 	display: block;
@@ -183,7 +184,46 @@ button{
 	margin-left: 25%;
 	pointer-events: none;
 	color: #aaa;
- }
+}
+
+.booking{
+	margin-left: 45%;
+}
+
+/* my bookings */
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 10px;
+	padding-top: 10px;
+	font-family: sans-serif;
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+td, th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: rgb(189, 238, 253);
+}
+tr:nth-child(odd) {
+	background-color: rgb(252, 253, 253);
+}
+
+tr:hover {
+	background-color: rgb(156, 215, 233);
+}
+
+th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #0081bd;
+	color: white;
+}
 
 /* Responsivness */
 @media screen and (max-height: 450px) {

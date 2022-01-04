@@ -6,6 +6,7 @@ import Sample from "./components/Sample";
 import LoginComponent from "./components/LoginComponent";
 import OwnerDashboard from "./components/OwnerDashboard";
 import CustomerDashboard from "./components/CustomerDashboard";
+import MyBookings from "./components/MyBookings";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<Route path="/login" element={<LoginComponent />} />
 				<Route path="/ownerdashboard" element={<OwnerDashboard />} />
 				<Route path="/customerdashboard" element={<CustomerDashboard />} />
+				<Route path="/mybookings" element={<MyBookings />} />
 			</Routes>
 		</Router>
 	);

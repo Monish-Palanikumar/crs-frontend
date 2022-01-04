@@ -27,6 +27,7 @@ function LoginComponent() {
 				}
 				else if (res.data === 2) {
 					// console.log("Customer");
+					localStorage.setItem("uname", username);
 					navigate("/customerdashboard");
 				}
 			})
