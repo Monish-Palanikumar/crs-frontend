@@ -7,6 +7,7 @@ import LoginComponent from "./components/LoginComponent";
 import OwnerDashboard from "./components/OwnerDashboard";
 import CustomerDashboard from "./components/CustomerDashboard";
 import MyBookings from "./components/MyBookings";
+import AllBookings from "./components/AllBookings";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/ownerdashboard" element={<OwnerDashboard />} />
 				<Route path="/customerdashboard" element={<CustomerDashboard />} />
 				<Route path="/mybookings" element={<MyBookings />} />
+				<Route path="/allbookings" element={<AllBookings />} />
 			</Routes>
 		</Router>
 	);

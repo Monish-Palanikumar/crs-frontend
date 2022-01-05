@@ -225,6 +225,12 @@ th {
 	color: white;
 }
 
+.approval{
+	/* border: 1px solid black; */
+	margin-left: 25%;
+	width: 50%;
+}
+
 /* Responsivness */
 @media screen and (max-height: 450px) {
 	.sidebar {padding-top: 15px;}

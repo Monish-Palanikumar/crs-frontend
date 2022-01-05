@@ -32,11 +32,17 @@ function OwnerDashboard() {
 			})
 			.catch(error => console.log(error));
 	}
+
+	const viewBookings = (e) => {
+		e.preventDefault();
+		navigate("/allbookings");
+	}
 	return (
 		<span>
 			<span>
 				<h2 className='mt-3 text-center'>Owner Dashboard</h2>
 				<button className='logout btn btn-black' onClick={logout}>Logout</button>
+				<button className='booking btn btn-info' onClick={viewBookings}>View All Bookings</button>
 			</span>
 
 			<hr />

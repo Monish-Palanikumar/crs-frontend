@@ -25,12 +25,13 @@ function MyBookings() {
 			<hr />
 			<table className='text-center mt-5'>
 				<tr className='text-center'>
-					<th>Car Name</th>
-					<th>Car Type</th>
+					<th className='text-center'>Car Name</th>
+					<th className='text-center'>Car Type</th>
 					<th className='text-center'>Start Date</th>
 					<th className='text-center'>End Date</th>
-					<th>Quantity</th>
-					<th>Status</th>
+					<th className='text-center'>Quantity</th>
+					<th className='text-center'>Status</th>
+					<th className='text-center'>Comments</th>
 				</tr>
 				{
 					bookings.map(booking => {
@@ -42,6 +43,7 @@ function MyBookings() {
 								<td>{booking.end}</td>
 								<td>{booking.quantity}</td>
 								<td>{booking.status}</td>
+								<td>{booking.comments}</td>
 							</tr>
 						)
 					})
