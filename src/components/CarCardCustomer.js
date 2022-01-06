@@ -61,7 +61,7 @@ function CarCardCustomer(props) {
 		);
 	}
 	return (
-		<div>
+		<div className='col'>
 			{
 				book ? renderBookingForm() : renderList()
 			}

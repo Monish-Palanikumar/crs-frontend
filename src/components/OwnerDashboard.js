@@ -48,7 +48,7 @@ function OwnerDashboard() {
 			<hr />
 			<AddCar />
 			<hr />
-			<h3 className='mt-2 text-center'>Available Cars</h3>
+			<h3 className='my-5 text-center'>Available Cars</h3>
 			<div className='row'>
 				{
 					cars.map((car, index) => {

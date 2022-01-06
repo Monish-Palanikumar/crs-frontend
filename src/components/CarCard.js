@@ -23,7 +23,7 @@ function CarCard(props) {
 
 	const renderEditForm = () => {
 		return (
-			<div className='card text-center mb-3' id="update-car">
+			<div className='col card text-center mb-3' id="update-car">
 				<form onSubmit={(e) => { updateCar(e, props.car.cname, newCar) }}>
 					<div className="form-row text-center">
 						<div>
@@ -52,8 +52,8 @@ function CarCard(props) {
 
 	const renderNormalCard = () => {
 		return (
-			<div className="m-4">
-				<span key={props.car.cid} className='card text-center'>
+			<div className="mb-4">
+				<div key={props.car.cid} className='card text-center'>
 					<div className='card-body'>
 						<h5 className='card-title'>{props.car.cname}</h5>
 						<p className="card-text">Type: {props.car.ctype}</p>
@@ -61,13 +61,13 @@ function CarCard(props) {
 						<br /><br />
 						<button className='btn btn-danger' onClick={(e) => { props.deleteCar(e, props.car.cname) }}>Delete</button>
 					</div>
-				</span>
+				</div>
 			</div>
 		);
 	}
 
 	return (
-		<div>
+		<div className='col'>
 			{
 				edit ? renderEditForm() : renderNormalCard()
 			}

@@ -47,19 +47,21 @@ function CustomerDashboard() {
 				<span className="fa fa-search form-control-feedback"></span>
 				<input type="text" className="form-control" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
 			</div>
-			{
-				cars.filter((val) => {
-					if (searchTerm === '') {
-						return val;
-					}
-					else if (val.cname.toLowerCase().includes(searchTerm.toLowerCase())) {
-						return val;
-					}
-				}).map((car, key) => (
-					<CarCardCustomer key={key} car={car} book={bookCar} />
+			<div className='row'>
+				{
+					cars.filter((val) => {
+						if (searchTerm === '') {
+							return val;
+						}
+						else if (val.cname.toLowerCase().includes(searchTerm.toLowerCase())) {
+							return val;
+						}
+					}).map((car, key) => (
+						<CarCardCustomer key={key} car={car} book={bookCar} />
 
-				))
-			}
+					))
+				}
+			</div>
 		</span>
 	)
 }
